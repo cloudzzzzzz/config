@@ -33,6 +33,7 @@ eureka:
     instance-id: microservicecloud-dept8001
     prefer-ip-address: true
 
+	
 ---
 server:
   port: 8001
