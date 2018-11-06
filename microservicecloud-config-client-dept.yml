@@ -1,5 +1,4 @@
 ﻿spring:
-  cloud:
   profiles:
     active:
       - dev
@@ -13,7 +12,7 @@ mybatis:
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
-  profile: test
+  profile: dev
   application:
     name: microservicecloud-dept
   datasource:
@@ -38,7 +37,7 @@ eureka:
 
 ---
 server:
-  port: 8001
+  port: 8002
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: entities
