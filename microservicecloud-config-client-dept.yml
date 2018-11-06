@@ -26,6 +26,9 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+  cloud:
+    config:
+      profile: dev
 eureka:
   client:
     service-url:
@@ -57,6 +60,9 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+  cloud:
+    config:
+      profile: test
 eureka:
   client:
     service-url:
