@@ -13,6 +13,7 @@ mybatis:
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
+  profile: test
   application:
     name: microservicecloud-dept
   datasource:
@@ -26,9 +27,6 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-  cloud:
-    config:
-      profile: dev
 eureka:
   client:
     service-url:
@@ -47,6 +45,7 @@ mybatis:
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
 spring:
+  profile: test
   application:
     name: microservicecloud-dept
   datasource:
@@ -60,9 +59,6 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-  cloud:
-    config:
-      profile: test
 eureka:
   client:
     service-url:
