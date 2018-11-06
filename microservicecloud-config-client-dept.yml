@@ -6,13 +6,8 @@
 ---
 server:
   port: 8001
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: entities
-  mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml
 spring:
-  profile: dev
+  profiles: dev
   application:
     name: microservicecloud-dept
   datasource:
@@ -34,17 +29,17 @@ eureka:
     instance-id: microservicecloud-dept8001
     prefer-ip-address: true
 
-
----
-server:
-  port: 8002
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: entities
   mapper-locations:
     - classpath:mybatis/mapper/**/*.xml
+---
+server:
+  port: 8002
+
 spring:
-  profile: test
+  profiles: test
   application:
     name: microservicecloud-dept
   datasource:
@@ -65,3 +60,8 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8001
     prefer-ip-address: true
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: entities
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml
